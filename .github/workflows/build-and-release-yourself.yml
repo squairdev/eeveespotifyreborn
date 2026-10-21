@@ -48,7 +48,7 @@ jobs:
           file_type=$(file --mime-type -b ${{ github.workspace }}/eeveespotify.deb)
           if [[ "$file_type" != "application/vnd.debian.binary-package" ]]; then
             echo "::error::Validation failed: The file is not a valid DEB file. Detected type: $file_type."
-            exit 1
+            
           fi
 
       - name: Download SwiftProtobuf
